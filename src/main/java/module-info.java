@@ -1,16 +1,9 @@
-module com.example.activity {
+module Activity {
     requires javafx.controls;
     requires javafx.fxml;
-    requires javafx.web;
 
-    requires org.controlsfx.controls;
-    requires com.dlsc.formsfx;
-    requires net.synedra.validatorfx;
-    requires org.kordamp.ikonli.javafx;
-    requires org.kordamp.bootstrapfx.core;
-    requires eu.hansolo.tilesfx;
-    requires com.almasb.fxgl.all;
+    opens View to javafx.fxml; // Open the View package for reflection by JavaFX
 
-    opens com.example.activity to javafx.fxml;
-    exports com.example.activity;
+    exports View; // Export the View package to make it accessible from other modules
 }
+
